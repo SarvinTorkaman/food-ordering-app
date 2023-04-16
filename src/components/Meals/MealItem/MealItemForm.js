@@ -1,24 +1,23 @@
-import React from 'react';
-import classes from './MealItemForm.module.css';
-import Input from '../../UI/Input/Input';
+import React from "react";
+import classes from "./MealItemForm.module.css";
+import Input from "../../UI/Input/Input";
 
-const MealForm = (props) => {
-
-    return(
-        <React.Fragment>
-
-            <form className={classes.form} onSubmit={props.handleSubmit}>
-
-                <Input />
-                <button type="submit">+ Add</button>
-    
-
-
-                
-            </form>
-        </React.Fragment>
-    )
-
-
-}
-export default MealForm;
+const MealItemForm = (props) => {
+  return (
+    <form className={classes.form} >
+      <Input
+        input={{
+          id: "amount_"+ props.id,
+          type: "number",
+          min: 1,
+          max: 5,
+          step: 1,
+          defaultValue: 1,
+        }}
+        label="Amount"
+      />
+      <button >+ Add</button>
+    </form>
+  );
+};
+export default MealItemForm;
