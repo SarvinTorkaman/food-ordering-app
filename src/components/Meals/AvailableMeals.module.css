@@ -23,3 +23,13 @@
     }
   }
   
+
+  .mealIsLoading {
+    text-align: center;
+    color: white;
+  }
+
+  .mealHasError{
+    text-align: center;
+    color: red;
+  }
